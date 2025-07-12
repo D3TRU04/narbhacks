@@ -1,21 +1,25 @@
-"use client";
+'use client'
 
-import Header from "@/components/Header";
-import Benefits from "@/components/home/Benefits";
-import Footer from "@/components/home/Footer";
-import FooterHero from "@/components/home/FooterHero";
-import Hero from "@/components/home/Hero";
-import Testimonials from "@/components/home/Testimonials";
+import Link from 'next/link'
+import { Sparkles, ArrowRight } from 'lucide-react'
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Hero } from '@/components/Hero';
+import { Features } from '@/components/Features';
+import { Faq } from '@/components/Faq';
+import { EditorDemo } from '@/components/EditorDemo';
+import { Cta } from '@/components/Cta';
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Header />
       <Hero />
-      <Benefits />
-      <Testimonials />
-      <FooterHero />
+      <Features />
+      <EditorDemo />
+      <Faq />
+      <Cta />
       <Footer />
-    </main>
-  );
+    </>
+  )
 }

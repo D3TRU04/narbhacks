@@ -1,52 +1,53 @@
-import Image from "next/image";
-import Link from "next/link";
+'use client'
 
-const Hero = () => {
+import Link from 'next/link'
+import { Sparkles, ArrowRight } from 'lucide-react'
+
+export function Hero() {
   return (
-    <section className="bg_image">
-      <div className="container py-16 sm:py-36 px-6 sm:px-0">
-        <div className="flex sm:flex-wrap flex-nowrap justify-between items-center max-h-[690px] h-full">
-          <div className="">
-            <h2 className="font-montserrat pb-7 sm:pb-[26px] text-black text-[44px] sm:text-[75px] not-italic font-medium leading-[111.3%] tracking-[-1.1px] sm:tracking-[-1.875px]">
-              The Ultimate <br /> Note-Taking Experience
-            </h2>
-            <p className="font-montserrat sm:pb-16 max-w-[680px] text-black text-xl sm:text-3xl not-italic font-normal leading-[103.3%] tracking-[-0.5px] sm:tracking-[-0.75px] pb-11">
-              UseNotes harnesses the power of artificial intelligence to
-              revolutionize the way you capture, organize, and recall your
-              thoughts
-            </p>
-            <Link href={"/notes"}>
-              <button className="button gap-2.5 px-8 py-4 font-montserrat text-white text-xl sm:text-3xl not-italic font-semibold leading-[90.3%] tracking-[-0.5px] sm:tracking-[-0.75px]">
-                Get Started
-              </button>
-            </Link>
-          </div>
-          <div className="max-w-[570px] w-full h-full">
-            <div className="relative max-w-[570px] w-full h-[380px] sm:h-[680px]">
-              <div className="absolute z-10 inset-0 flex justify-center items-center bg-[#0983DF99] opacity-40 blur-[102px] rounded-[673px]">
-                <Image
-                  src={"/images/hero_image_bg.svg"}
-                  width={541}
-                  height={673}
-                  alt="hero"
-                  className="w-[344px] sm:w-[541px] "
-                />
-              </div>
-              <div className=" absolute z-50 inset-0 flex justify-center items-center">
-                <Image
-                  src={"/images/hero.png"}
-                  width={561}
-                  height={456}
-                  alt="hero"
-                  className="w-[357px] sm:w-[561px]"
-                />
-              </div>
-            </div>
-          </div>
+    <section className="relative pt-48 pb-24 bg-gradient-to-br from-yellow-200 to-yellow-300">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+      <div className="max-w-7xl mx-auto relative text-center z-10 px-4 sm:px-6 lg:px-8">
+        <div className="mb-8">
+          <span className="inline-flex items-center px-4 py-2 rounded-full bg-black/5 border border-black/10 text-black/80 text-sm">
+            <Sparkles size={16} className="mr-2" />
+            AI-Powered Photo Editing
+          </span>
         </div>
+        
+        <div className="mb-8">
+          <h1 className="text-5xl md:text-7xl mb-6 text-black leading-tight">
+            Edit Photos with
+            <br />
+            Natural Language
+          </h1>
+        </div>
+        
+        <p className="text-xl md:text-2xl text-black/60 mb-8 max-w-3xl mx-auto">
+          Transform your photos instantly with AI. Just describe what you want to change, and watch the magic happen.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <Link href="/editor" className="px-8 py-4 bg-black text-white rounded-lg hover:bg-black/80 transition-colors flex items-center space-x-2">
+            <span>Start Editing Free</span>
+            <ArrowRight size={20} />
+          </Link>
+          {/* <button className="px-8 py-4 bg-black/5 hover:bg-black/10 rounded-lg transition-colors flex items-center space-x-2 border border-black/10 text-black">
+            <Play size={20} />
+            <span>Watch Demo</span>
+          </button> */}
+        </div>
+
+        {/* Stats */}
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl md:text-4xl text-black mb-2">{stat.number}</div>
+              <div className="text-black/60 text-sm">{stat.label}</div>
+            </div>
+          ))}
+        </div> */}
       </div>
     </section>
-  );
-};
-
-export default Hero;
+  )
+} 

@@ -1,5 +1,4 @@
-import { useClerk } from "@clerk/clerk-react";
-import { LogOut, Paintbrush2 } from "lucide-react";
+import { LogOut, Paintbrush2, Users, MapPin, Gift, Settings, Home } from "lucide-react";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 import { Button } from "./button";
@@ -21,7 +20,7 @@ export function UserNav({
   name: string;
   email: string;
 }) {
-  const { signOut } = useClerk();
+  const signOut = () => alert('Sign out (placeholder)');
 
   return (
     <DropdownMenu>
@@ -45,12 +44,37 @@ export function UserNav({
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <Link href="/notes">
+        <Link href="/dashboard">
           <DropdownMenuItem className="hover:cursor-pointer hover:bg-gray-200">
-            <Paintbrush2 className="mr-2 h-4 w-4 text-black" />
+            <Home className="mr-2 h-4 w-4 text-black" />
             <span className="text-black">Dashboard</span>
           </DropdownMenuItem>
         </Link>
+        <Link href="/group">
+          <DropdownMenuItem className="hover:cursor-pointer hover:bg-gray-200">
+            <Users className="mr-2 h-4 w-4 text-black" />
+            <span className="text-black">Group</span>
+          </DropdownMenuItem>
+        </Link>
+        <Link href="/location/1">
+          <DropdownMenuItem className="hover:cursor-pointer hover:bg-gray-200">
+            <MapPin className="mr-2 h-4 w-4 text-black" />
+            <span className="text-black">Locations</span>
+          </DropdownMenuItem>
+        </Link>
+        <Link href="/rewards">
+          <DropdownMenuItem className="hover:cursor-pointer hover:bg-gray-200">
+            <Gift className="mr-2 h-4 w-4 text-black" />
+            <span className="text-black">Rewards</span>
+          </DropdownMenuItem>
+        </Link>
+        <Link href="/settings">
+          <DropdownMenuItem className="hover:cursor-pointer hover:bg-gray-200">
+            <Settings className="mr-2 h-4 w-4 text-black" />
+            <span className="text-black">Settings</span>
+          </DropdownMenuItem>
+        </Link>
+        <DropdownMenuSeparator />
         <DropdownMenuItem
           onClick={() => signOut()}
           className="hover:cursor-pointer hover:bg-gray-200"

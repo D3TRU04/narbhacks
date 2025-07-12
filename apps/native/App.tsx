@@ -2,7 +2,9 @@ import { View, StatusBar, Platform } from "react-native";
 import { useFonts } from "expo-font";
 import { LogBox } from "react-native";
 import Navigation from "./src/navigation/Navigation";
-import ConvexClientProvider from "./ConvexClientProvider";
+// import ConvexClientProvider from "./ConvexClientProvider";
+import { TailwindProvider } from 'nativewind';
+import { DarkModeProvider } from "./src/screens/SettingsScreen";
 
 export default function App() {
   LogBox.ignoreLogs(["Warning: ..."]);
@@ -28,7 +30,9 @@ export default function App() {
     Platform.OS === "ios" ? 50 : StatusBar.currentHeight;
 
   return (
-    <ConvexClientProvider>
+    <DarkModeProvider>
+      <TailwindProvider>
+        {/* <ConvexClientProvider> */}
       <View style={{ flex: 1 }}>
         <View style={{ height: STATUS_BAR_HEIGHT, backgroundColor: "#0D87E1" }}>
           <StatusBar
@@ -39,6 +43,8 @@ export default function App() {
         </View>
         <Navigation />
       </View>
-    </ConvexClientProvider>
+        {/* </ConvexClientProvider> */}
+      </TailwindProvider>
+    </DarkModeProvider>
   );
 }

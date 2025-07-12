@@ -2,26 +2,26 @@ import Image from "next/image";
 
 const benefits = [
   {
-    title: "Effortless Note-Taking",
-    description: "Capture thoughts effortlessly with our intuitive interface",
+    title: "Healthy Check-Ins",
+    description: "Earn points for visiting gyms, parks, and healthy locations. Avoid temptations and track your progress!",
     image: "/images/goodNews.png",
   },
   {
-    title: "Seamless Sync",
+    title: "Group Motivation",
     description:
-      "Access your notes anytime, anywhere, with seamless cloud synchronization.",
+      "Join or create groups, share goals, and climb the leaderboard together. Support and challenge your friends!",
     image: "/images/cloudSync.png",
   },
   {
-    title: "Enhanced Productivity",
+    title: "Rewards & Progress",
     description:
-      "Let AI handle organization, so you can focus on what matters most.",
+      "Redeem your points for real rewards and see your healthy streaks grow. Celebrate every win!",
     image: "/images/googleCalander.png",
   },
   {
-    title: "AI-Powered Insights",
+    title: "Value-Based Alerts",
     description:
-      "Gain valuable insights with smart analytics based on your note patterns.",
+      "Get notified when you’re near places that match your values—or temptations to avoid. Stay on track!",
     image: "/images/bot.png",
   },
 ];
@@ -41,7 +41,7 @@ const Benefits = () => {
           Benefits
         </p>
         <h3 className=" text-black text-3xl sm:text-[57px] not-italic font-medium leading-[90.3%] tracking-[-1.425px] font-montserrat text-center pb-[46px] sm:pb-[87px]">
-          Why Choose UseNotes
+          Why Choose Narby
         </h3>
 
         <div className="relative">
