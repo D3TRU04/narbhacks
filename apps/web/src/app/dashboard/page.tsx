@@ -109,7 +109,7 @@ export default function DashboardPage() {
       return;
     }
     const service = new window.google.maps.places.AutocompleteService();
-    service.getPlacePredictions({ input }, (predictions: google.maps.places.AutocompletePrediction[] | null) => {
+    service.getPlacePredictions({ input }, (predictions: any) => {
       setAutocomplete(predictions || []);
     });
   }, [input, googleMapsKey]);
