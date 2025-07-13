@@ -7,6 +7,13 @@ import { useMutation, useQuery } from "convex/react";
 import { api } from "@packages/backend/convex/_generated/api";
 import { Dialog } from "@headlessui/react";
 
+// Fix for TypeScript: declare window.google for Google Maps API
+declare global {
+  interface Window {
+    google: any;
+  }
+}
+
 function loadGoogleMapsScript(apiKey: string) {
   if (typeof window === "undefined" || window.google?.maps) return;
   if (document.getElementById("google-maps-script")) return;
