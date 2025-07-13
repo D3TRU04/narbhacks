@@ -15,7 +15,12 @@ export default function Home() {
   const { isSignedIn } = useUser();
   return (
     <>
-      <Header />
+      <Header
+        googleMapsKey=""
+        setGoogleMapsKey={() => {}}
+        openaiKey=""
+        setOpenaiKey={() => {}}
+      />
       <Hero isSignedIn={isSignedIn} />
       <Features />
       <EditorDemo />
