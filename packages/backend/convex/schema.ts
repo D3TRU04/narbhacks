@@ -8,4 +8,10 @@ export default defineSchema({
     content: v.string(),
     summary: v.optional(v.string()),
   }),
+  memories: defineTable({
+    userId: v.string(),
+    date: v.string(),
+    places: v.array(v.any()),
+    chat: v.array(v.any()),
+  }).index("by_userId_date", ["userId", "date"]),
 });

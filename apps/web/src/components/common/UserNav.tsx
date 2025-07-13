@@ -10,6 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./dropdown-menu";
+import { useClerk } from "@clerk/nextjs";
 
 export function UserNav({
   image,
@@ -20,7 +21,9 @@ export function UserNav({
   name: string;
   email: string;
 }) {
-  const signOut = () => alert('Sign out (placeholder)');
+  const { signOut } = useClerk();
+
+  const handleSignOut = () => signOut({ redirectUrl: '/' });
 
   return (
     <DropdownMenu>
@@ -50,37 +53,19 @@ export function UserNav({
             <span className="text-black">Dashboard</span>
           </DropdownMenuItem>
         </Link>
-        <Link href="/group">
-          <DropdownMenuItem className="hover:cursor-pointer hover:bg-gray-200">
-            <Users className="mr-2 h-4 w-4 text-black" />
-            <span className="text-black">Group</span>
-          </DropdownMenuItem>
-        </Link>
-        <Link href="/location/1">
-          <DropdownMenuItem className="hover:cursor-pointer hover:bg-gray-200">
-            <MapPin className="mr-2 h-4 w-4 text-black" />
-            <span className="text-black">Locations</span>
-          </DropdownMenuItem>
-        </Link>
-        <Link href="/rewards">
-          <DropdownMenuItem className="hover:cursor-pointer hover:bg-gray-200">
-            <Gift className="mr-2 h-4 w-4 text-black" />
-            <span className="text-black">Rewards</span>
-          </DropdownMenuItem>
-        </Link>
-        <Link href="/settings">
+        {/* <Link href="/settings">
           <DropdownMenuItem className="hover:cursor-pointer hover:bg-gray-200">
             <Settings className="mr-2 h-4 w-4 text-black" />
             <span className="text-black">Settings</span>
           </DropdownMenuItem>
-        </Link>
+        </Link> */}
         <DropdownMenuSeparator />
         <DropdownMenuItem
-          onClick={() => signOut()}
+          onClick={handleSignOut}
           className="hover:cursor-pointer hover:bg-gray-200"
         >
           <LogOut className="mr-2 h-4 w-4 text-black" />
-          <span className="text-black">Log out</span>
+          <span className="text-black">Logout</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

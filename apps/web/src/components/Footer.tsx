@@ -12,48 +12,27 @@ export function Footer() {
               <div className="w-8 h-8 bg-[#0D87E1] rounded-lg flex items-center justify-center">
                 <MapPin size={16} className="text-white" />
               </div>
-              <span className="text-lg font-heading">narby</span>
+              <span className="text-lg font-heading">Vitalize</span>
             </div>
             <p className="text-gray-500 mb-4 max-w-md">
-              The future of social health. Earn points for healthy actions, check in at gyms and parks, and grow together with friends and groups.
+              The future of social health. Get feedback on your health and fitness.
             </p>
             <div className="flex space-x-4">
-              {/* <a href="#" className="text-gray-400 hover:text-black transition-colors">
-                <Twitter size={20} />
-              </a> */}
-              <a href="#" className="text-gray-400 hover:text-black transition-colors">
+              <a href="https://github.com/D3TRU04/narbhacks" className="text-gray-400 hover:text-black transition-colors">
                 <Github size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-black transition-colors">
-                <Linkedin size={20} />
-              </a>
             </div>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold mb-4">Product</h3>
-            <ul className="space-y-2 text-gray-500">
-              <li><a href="#features" className="hover:text-black transition-colors">Features</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-gray-500">
-              <li><a href="#" className="hover:text-black transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-black transition-colors">Contact</a></li>
-            </ul>
           </div>
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200">
           <div className="text-gray-500 text-sm">
-            © 2025 Narby. All rights reserved.
+            © 2025 Vitalize. All rights reserved.
           </div>
           <div className="flex space-x-6 text-sm text-gray-500 mt-4 md:mt-0">
-            {/* <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-black transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-black transition-colors">Cookie Policy</a> */}
+            <a href="#" className="hover:text-black transition-colors">Cookie Policy</a>
           </div>
         </div>
       </div>

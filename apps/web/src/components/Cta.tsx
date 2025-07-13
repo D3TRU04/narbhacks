@@ -10,12 +10,12 @@ export function Cta() {
       }}></div>
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <h2 className="text-4xl md:text-5xl text-black mb-6">
+        <h2 className="text-4xl md:text-5xl text-black font-heading mb-6">
           Ready to start your healthy journey?
         </h2>
         
         <p className="text-xl text-black/60 mb-10">
-          Join Narby for free and see how fun, social, and rewarding healthy habits can be.
+          Join Vitalize for free and see how fun, social, and rewarding healthy habits can be.
         </p>
 
         <Link
